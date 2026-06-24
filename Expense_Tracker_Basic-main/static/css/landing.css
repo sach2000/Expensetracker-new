@@ -1,0 +1,250 @@
+/* ------------------------------------------------------------------ */
+/* Hero v2                                                             */
+/* ------------------------------------------------------------------ */
+
+.hero-v2 {
+    padding: 3.5rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-v2-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-badge-v2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.75rem;
+}
+
+.hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+}
+
+.hero-title-v2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    color: #1a2744;
+    margin-bottom: 0.05em;
+}
+
+.hero-tagline-v2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    line-height: 1.15;
+    color: #1a6b3a;
+    margin-bottom: 1.5rem;
+}
+
+.hero-sub-v2 {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 460px;
+    margin: 0 auto 2rem;
+}
+
+/* Joined button pair */
+.hero-cta-v2 {
+    display: inline-flex;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.hero-btn-v2 {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.75rem 1.75rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+    line-height: 1.5;
+}
+
+.hero-btn-v2 + .hero-btn-v2 {
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-btn-v2:hover { background: #2a2a2a; }
+
+/* ------------------------------------------------------------------ */
+/* App mock card                                                       */
+/* ------------------------------------------------------------------ */
+
+.app-card {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.app-card-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.chrome-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.chrome-red    { background: #ff5f57; }
+.chrome-yellow { background: #febc2e; }
+.chrome-green  { background: #28c840; }
+
+.app-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.app-metric {
+    background: var(--paper-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    margin-bottom: 0.2rem;
+}
+
+.metric-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+}
+
+.metric-value--num { font-size: 2rem; }
+
+.metric-status {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+}
+
+.metric-status.positive { color: #16a34a; }
+
+/* Category bars */
+.app-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.app-bar-row {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bar-label {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+}
+
+.bar-track {
+    height: 8px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Video modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal.is-open { display: flex; }
+
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.video-modal-box {
+    position: relative;
+    z-index: 1;
+    width: min(90vw, 900px);
+    background: #000;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.75rem;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+
+.video-modal-close:hover { background: rgba(0, 0, 0, 0.9); }
+
+.video-modal-frame {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.video-modal-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
